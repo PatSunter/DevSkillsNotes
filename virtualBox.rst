@@ -17,3 +17,15 @@ Setup of Shared folders with Host OS
 Refs:
  * http://forums.virtualbox.org/viewtopic.php?t=15868
 
+Need to re-initialise network stuff before/after cloning
+--------------------------------------------------------
+
+For Ubuntu machines - otherwise its very slow to boot and is waiting on network stuff...
+
+Either:
+ * before cloning:
+    sudo rm -f /etc/udev/rules.d/70-persistent-net.rules
+ * Or after cloning, on the clone, do the same.
+
+Refs:
+ * http://askubuntu.com/questions/82322/how-do-i-fix-broken-networking-in-cloned-virtual-machines
