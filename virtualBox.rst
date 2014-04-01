@@ -1,4 +1,3 @@
-
 Setup of Shared folders with Host OS
 ------------------------------------
 
@@ -11,6 +10,9 @@ Setup of Shared folders with Host OS
      mount -t vboxsf share /home/<username>/host
    * You might want to add relevant perms options at end of above lines, eg "
      -o uid=myuser,gid=myuser
+ * One quick way to get access to automounted folders in /media:
+   run "sudo usermod -a -G vboxsf username" where username is your username on the VM,
+   to get added to the appropriate group.
 
 Refs:
  * http://forums.virtualbox.org/viewtopic.php?t=15868
