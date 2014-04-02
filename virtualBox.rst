@@ -30,7 +30,21 @@ Either:
 Refs:
  * http://askubuntu.com/questions/82322/how-do-i-fix-broken-networking-in-cloned-virtual-machines
 
+Setting up a new Ubuntu server in Vbox:
+---------------------------------------
+
 My preferred sources of pre-built VirtualBoxes
-----------------------------------------------
+""""""""""""""""""""""""""""""""""""""""""""""
 
 http://virtualboxes.org/images/ubuntu-server/
+
+
+Basic Ubuntu server setup
+"""""""""""""""""""""""""
+
+To make more user-friendly, keyboard, mouse stuff:-
+ * sudo dpkg-reconfigure keyboard-configuration
+
+Refs:
+ * http://askubuntu.com/questions/155424/changing-tty-keyboard-layout-on-a-server
+
