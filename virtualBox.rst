@@ -29,3 +29,8 @@ Either:
 
 Refs:
  * http://askubuntu.com/questions/82322/how-do-i-fix-broken-networking-in-cloned-virtual-machines
+
+My preferred sources of pre-built VirtualBoxes
+----------------------------------------------
+
+http://virtualboxes.org/images/ubuntu-server/
