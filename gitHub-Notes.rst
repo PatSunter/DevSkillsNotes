@@ -1,3 +1,14 @@
+
+Useful git cmd-line options:
+----------------------------
+
+Equivalent to svn log -v to show filenames of changed files::
+
+  git log --name-only
+
+General workflow:
+-----------------
+
 Seems there are a couple of main Git workflows:
 
 1) All be collaborators on one project, but maintain multiple streams of
