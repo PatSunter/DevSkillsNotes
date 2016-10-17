@@ -30,3 +30,15 @@ Undoing a commit for more extensive changes, then redo::
  git commit -c ORIG_HEAD
 
 (With thanks to http://stackoverflow.com/questions/927358/how-to-undo-last-commits-in-git)
+
+Git - modifying other earlier commits (rebase):
+-----------------------------------------------
+
+Recommended approach is to use git rebase --interactive.
+
+http://stackoverflow.com/questions/1186535/how-to-modify-a-specified-commit-in-git
+
+"You can use git rebase, for example, if you want to modify back to commit bbc643cd, run"::
+
+ $ git rebase --interactive 'bbc643cd^'
+
