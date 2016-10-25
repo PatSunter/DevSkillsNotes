@@ -6,6 +6,23 @@ Equivalent to svn log -v to show filenames of changed files::
 
   git log --name-only
 
+Git - configuration, global and local:
+--------------------------------------
+
+To set a global email address::
+
+  git config --global --set user.email email@address.com
+
+To set a local email address (e.g. a different github one
+compared to your work one)::
+
+  git config --local --set user.email email@address.com
+
+To edit one of these config files (replace local/global as 
+needed)::
+
+  git config --local -e
+
 Git - controlling push to different remotes:
 --------------------------------------------
 
