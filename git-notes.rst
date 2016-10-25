@@ -22,6 +22,10 @@ Basic editing of last commit msg (if you haven't staged other changes)::
 
   git commit --amend
 
+Editing the author (E.g. if you didn't set email for a repos correctly)::
+
+  git commit --amend --author="Author Name <email@address.com>"
+
 Undoing a commit for more extensive changes, then redo::
 
  git reset HEAD~
