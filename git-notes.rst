@@ -23,6 +23,13 @@ needed)::
 
   git config --local -e
 
+Git - checking branches on a remote:
+------------------------------------
+
+To see more info on a configured remote, including branches::
+
+  git remote show remote_name
+
 Git - controlling push to different remotes:
 --------------------------------------------
 
