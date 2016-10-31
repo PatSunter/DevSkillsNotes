@@ -23,12 +23,19 @@ needed)::
 
   git config --local -e
 
-Git - checking branches on a remote:
-------------------------------------
+Git - branches, remote to local
+-------------------------------
 
 To see more info on a configured remote, including branches::
 
   git remote show remote_name
+
+To check out a remote branch locally, and set tracking (e.g.
+assume remote 'origin', with existing branch 'test')::
+
+  git checkout -b test origin/test
+
+(For more see http://stackoverflow.com/questions/1783405/how-to-check-out-a-remote-git-branch)
 
 Git - controlling push to different remotes:
 --------------------------------------------
