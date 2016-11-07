@@ -5,3 +5,4 @@ set expandtab
 set hlsearch
 set incsearch
 set columns=80
+set ruler
