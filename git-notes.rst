@@ -77,3 +77,5 @@ http://stackoverflow.com/questions/1186535/how-to-modify-a-specified-commit-in-g
 
  $ git rebase --interactive 'bbc643cd^'
 
+After changing a commit you picked to edit, do `git commit --amend`.
+Once happy, do `git rebase --continue`.
