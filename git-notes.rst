@@ -79,3 +79,16 @@ http://stackoverflow.com/questions/1186535/how-to-modify-a-specified-commit-in-g
 
 After changing a commit you picked to edit, do `git commit --amend`.
 Once happy, do `git rebase --continue`.
+
+Combining multiple commit-histories using rebase rather than merge
+------------------------------------------------------------------
+
+To avoid a lot of code merges in the history (especially when changes
+are non-conflicting but e.g. you commit to your local repo before
+updating) - you can use the git rebase command.
+
+Default is fairly simple, just::
+
+  git rebase
+
+More advanced use listed above.
