@@ -92,3 +92,12 @@ Default is fairly simple, just::
   git rebase
 
 More advanced use listed above.
+
+Diff against a stash
+--------------------
+
+See: http://stackoverflow.com/questions/7677736/git-diff-against-a-stash
+
+To diff against the first stash::
+
+    git stash show -p stash@{0}
