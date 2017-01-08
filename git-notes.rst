@@ -2,7 +2,12 @@
 Useful git cmd-line options:
 ----------------------------
 
-Equivalent to svn log -v to show filenames of changed files::
+Equivalent to svn log -v to show filenames of changed files
+and status::
+
+  git log --name-status
+
+Or to just show names of files::
 
   git log --name-only
 
