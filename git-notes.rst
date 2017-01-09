@@ -42,12 +42,27 @@ assume remote 'origin', with existing branch 'test')::
 
 (For more see http://stackoverflow.com/questions/1783405/how-to-check-out-a-remote-git-branch)
 
+Interactive git tools (esp history checking):
+---------------------------------------------
+
+ * gitk - built-in repo browser, see https://git-scm.com/docs/gitk
+ * Other GUI tool ideas: https://git-scm.com/download/gui/linux
+
+Git - printing all tags info, e.g. date created:
+------------------------------------------------
+
+For annotated tags use::
+
+  git for-each-ref --sort=taggerdate --format '%(refname) %(taggerdate)' refs/tags
+
+(Via http://stackoverflow.com/questions/6269927/how-can-i-list-all-tags-in-my-git-repository-by-the-date-they-were-created)
+
 Git - controlling push to different remotes:
 --------------------------------------------
 
 Pushing to e.g. a gerrit code-review remote::
 
-  git push gerrit HEAD:refs/for/master 
+  git push gerrit HEAD:refs/for/master
 
 (Pushing to the master branch, else use refs/for/$BRANCH)
 
