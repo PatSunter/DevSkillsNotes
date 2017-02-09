@@ -2,4 +2,4 @@
 # git config --global core.excludesfile ~/.gitignore_global
 *.pyc
 *.swp
-*.pyc
+Thumbs.db
