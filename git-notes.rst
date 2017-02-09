@@ -2,7 +2,12 @@
 Useful git cmd-line options:
 ----------------------------
 
-Equivalent to svn log -v to show filenames of changed files::
+Equivalent to svn log -v to show filenames of changed files
+and status::
+
+  git log --name-status
+
+Or to just show names of files::
 
   git log --name-only
 
@@ -37,12 +42,47 @@ assume remote 'origin', with existing branch 'test')::
 
 (For more see http://stackoverflow.com/questions/1783405/how-to-check-out-a-remote-git-branch)
 
+Interactive git tools (esp history checking):
+---------------------------------------------
+
+ * gitk - built-in repo browser, see https://git-scm.com/docs/gitk
+ * Other GUI tool ideas: https://git-scm.com/download/gui/linux
+
+Git - tagging:
+--------------
+
+Creating annotated (signed) tags
+""""""""""""""""""""""""""""""""
+
+Create annotated tags with::
+
+  git tag -m"tag annotation" <tagname>
+
+e.g.::
+
+  git tag -m"Version 2.0.0rc4" v2.0.0rc4
+
+(Need to have PGP account etc created first to do the annotated messages).
+
+Git - printing all tags info, e.g. date created:
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+For annotated tags use::
+
+  git for-each-ref --sort=taggerdate --format '%(refname) %(taggerdate)' refs/tags
+
+Or to also print authors::
+
+  git for-each-ref --sort=taggerdate --format '%(refname) %09 %(taggerdate) %(subject) %(taggeremail)' refs/tags
+
+(Via http://stackoverflow.com/questions/6269927/how-can-i-list-all-tags-in-my-git-repository-by-the-date-they-were-created)
+
 Git - controlling push to different remotes:
 --------------------------------------------
 
 Pushing to e.g. a gerrit code-review remote::
 
-  git push gerrit HEAD:refs/for/master 
+  git push gerrit HEAD:refs/for/master
 
 (Pushing to the master branch, else use refs/for/$BRANCH)
 
@@ -92,3 +132,12 @@ Default is fairly simple, just::
   git rebase
 
 More advanced use listed above.
+
+Diff against a stash
+--------------------
+
+See: http://stackoverflow.com/questions/7677736/git-diff-against-a-stash
+
+To diff against the first stash::
+
+    git stash show -p stash@{0}
