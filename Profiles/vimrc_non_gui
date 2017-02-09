@@ -1,11 +1,22 @@
-set ai
 set sw=4
 set tabstop=4
+set autoindent
+set smartindent
 set expandtab
 set hlsearch
 set incsearch
 set columns=80
 set ruler
+" Recommended by http://stackoverflow.com/questions/2514445/turning-off-auto-indent-when-pasting-text-into-vim
+" http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
+" nnoremap <F3> :set invpaste paste?<CR>
+set pastetoggle=<F3>
+set showmode
+
+" Put colorscheme before whitespace stuff.
+" colorscheme elflord
+colorscheme darkblue
+
 ":autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 " The following alternative may be less obtrusive.
 highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
