@@ -14,6 +14,10 @@ Or to just show names of files::
 Git - configuration, global and local:
 --------------------------------------
 
+To set your name::
+
+  git config --global user.name "my name"
+
 To set a global email address::
 
   git config --global --set user.email email@address.com
