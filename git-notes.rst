@@ -90,6 +90,23 @@ Pushing to e.g. a gerrit code-review remote::
 
 (Pushing to the master branch, else use refs/for/$BRANCH)
 
+Adding for commit only part of a file (--patch):
+------------------------------------------------
+
+For adding only part of a file for committing::
+
+  git add --patch filename.x
+
+Will bring up interactive prompt for hunks, useful options other than
+y/n::
+
+  a: this hunk and all later hunks
+  q: quit, not this hunk and exit.
+
+Press ? for help, or see http://stackoverflow.com/questions/1085162/commit-only-part-of-a-file-in-git
+
+Note, can use git diff --staged to see what's staged for committing.
+
 Git - modifying the last commit:
 --------------------------------
 
