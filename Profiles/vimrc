@@ -1,2 +1,4 @@
 source ~/.vimrc_non_gui
 set colorcolumn=80
+" set guifont=Menlo\ Regular:h14
+set lines=30 columns=80
