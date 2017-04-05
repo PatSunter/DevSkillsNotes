@@ -5,6 +5,7 @@ set smartindent
 set expandtab
 set hlsearch
 set incsearch
+set textwidth=78
 set columns=80
 set ruler
 " Recommended by http://stackoverflow.com/questions/2514445/turning-off-auto-indent-when-pasting-text-into-vim
@@ -45,3 +46,19 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 " http://superuser.com/questions/10588/how-to-make-cut-copy-paste-in-gvim-on-ubuntu-work-with-ctrlx-ctrlc-ctrlv
 source $VIMRUNTIME/mswin.vim
 behave mswin
+
+" Auto-set filetype syntax highlighting for txt files to RST
+"augroup filetypdetect
+"   autocmd BufEnter,BufRead,BufNewFile *.txt,*.TXT set filetype=rst
+"augroup END
+
+autocmd BufRead,BufNewFile *.txt,*.TXT set filetype=rst
+
+" Shortcuts for RST headings
+let mapleader = ","
+map <leader>h1 :put=repeat('=', col('$')-1)<cr>
+map <leader>h2 :put=repeat('-', col('$')-1)<cr>
+map <leader>h3 :put=repeat('^', col('$')-1)<cr>
+map <leader>h4 :put=repeat('\"', col('$')-1)<cr>
+
+" set showmatch
