@@ -127,6 +127,13 @@ Undoing a commit for more extensive changes, then redo::
 
 (With thanks to http://stackoverflow.com/questions/927358/how-to-undo-last-commits-in-git)
 
+Re-check out a branch from remote, ignore local commits:
+--------------------------------------------------------
+
+To check out a remote branch and abandon local commits::
+
+ git reset --hard origin/branch
+
 Git - modifying other earlier commits (rebase):
 -----------------------------------------------
 
