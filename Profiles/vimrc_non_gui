@@ -17,6 +17,7 @@ set showmode
 " Put colorscheme before whitespace stuff.
 " colorscheme elflord
 colorscheme darkblue
+set background=light
 
 ":autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 " The following alternative may be less obtrusive.
