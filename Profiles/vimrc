@@ -2,3 +2,10 @@ source ~/.vimrc_non_gui
 set colorcolumn=80
 " set guifont=Menlo\ Regular:h14
 set lines=30 columns=80
+
+" I only like solarized (dark background) in gvim
+" http://ethanschoonover.com/solarized/vim-colors-solarized
+if has('gui_running')
+    set background=dark
+    colorscheme solarized
+endif
