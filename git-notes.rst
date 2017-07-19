@@ -1,6 +1,6 @@
 
-Useful git cmd-line options:
-----------------------------
+git logging:
+------------
 
 Equivalent to svn log -v to show filenames of changed files
 and status::
@@ -10,6 +10,10 @@ and status::
 Or to just show names of files::
 
   git log --name-only
+
+To show changes to a specific file with each revision::
+
+  git log -p /path/to/file
 
 Git - configuration, global and local:
 --------------------------------------
@@ -31,6 +35,18 @@ To edit one of these config files (replace local/global as
 needed)::
 
   git config --local -e
+
+Git - configure global ignores:
+-------------------------------
+
+See https://help.github.com/articles/ignoring-files/
+
+Steps:
+
+ # Create, edit, save a global gitignore file, e.g. ~/.gitignore_global
+ # Run the following::
+
+     git config --global core.excludesfile ~/.gitignore_global
 
 Git - branches, remote to local
 -------------------------------
