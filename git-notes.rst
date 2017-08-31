@@ -164,6 +164,28 @@ http://stackoverflow.com/questions/1186535/how-to-modify-a-specified-commit-in-g
 After changing a commit you picked to edit, do `git commit --amend`.
 Once happy, do `git rebase --continue`.
 
+Breaking a previous commit into several (using rebase)
+------------------------------------------------------
+
+To break a prev commit into several::
+
+   git rebase --interactive
+
+Select commit to break up, mark as e (edit).
+Once it rewinds to selected commit::
+
+  git reset HEAD~
+
+This will make all previously-committed changes marked as
+merges (M) / new files, and you can then go ahead and
+add/commit as new commits.
+
+(Note:- use 'git commit' rather than 'git commit --amend'
+ as is normally done when fixing an existing commit during
+ rebase).
+
+https://stackoverflow.com/questions/6217156/break-a-previous-commit-into-multiple-commits
+
 Combining multiple commit-histories using rebase rather than merge
 ------------------------------------------------------------------
 
