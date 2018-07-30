@@ -15,6 +15,25 @@ To show changes to a specific file with each revision::
 
   git log -p /path/to/file
 
+Selecting revisions:
+--------------------
+
+See https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection
+
+Selecting a commit based on a short sha::
+
+  git show d921970
+
+Selecting a relative commit with '^' meaning parent::
+
+  git show d921970^
+  git show HEAD^
+
+Selecting a relative commit, of 'several parents of'
+(Example below means 'the commit 3 before d921970')::
+
+  git show d921970~3
+
 Git - configuration, global and local:
 --------------------------------------
 
